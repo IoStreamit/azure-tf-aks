@@ -71,6 +71,7 @@ variable node_public_ip_enable {
 variable dns_prefix {
   type        = string
   description = "DNS prefix to append to the cluster"
+  default     = "aks-df-dns"
 }
 
 variable node_pool_name {
