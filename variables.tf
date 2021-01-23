@@ -13,6 +13,11 @@ variable resource_group {
   description = "* name of the resource group in which to create the virtual network."
 }
 
+variable node_resource_group {
+  type        = string
+  description = "* name of the resource group pool"
+}
+
 variable cluster_subnet_id {
   type        = string
   description = "* subnet id of the node pooles to be used"
@@ -66,7 +71,6 @@ variable node_public_ip_enable {
 variable dns_prefix {
   type        = string
   description = "DNS prefix to append to the cluster"
-  default     = ""
 }
 
 variable node_pool_name {
