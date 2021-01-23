@@ -36,7 +36,3 @@ output "node_resource_group" {
   description = "The auto-generated Resource group which contains the resources for this Managed Kubernetes Cluster."
   value       = azurerm_kubernetes_cluster.aks.node_resource_group
 }
-
-output "subnet_id" {
-  value = data.azurerm_subnet.aks.id
-}
