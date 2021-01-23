@@ -1,10 +1,15 @@
+locals {
+  node_resource_group = var.node_resource_group == "" ? "${var.name}-aks-${var.node_pool_name}-${var.location}" : var.node_resource_group
+  oms_enabled         = var.oms_log_analytics_workspace_id != null
+}
+
 resource "azurerm_kubernetes_cluster" "aks" {
   name                            = var.name
   location                        = var.location
-  resource_group_name             = var.resource_group
+  resource_group_name             = var.resource_group_name
   dns_prefix                      = var.dns_prefix
   kubernetes_version              = var.kubernetes_version
-  node_resource_group             = var.node_resource_group
+  node_resource_group             = local.node_resource_group
   api_server_authorized_ip_ranges = var.api_server_authorized_ip_ranges
   enable_pod_security_policy      = var.enable_pod_security_policy
  
