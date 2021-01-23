@@ -13,7 +13,7 @@ variable resource_group {
   description = "* name of the resource group in which to create the virtual network."
 }
 
-variable node_resource_group {
+variable node_resource_group_name {
   type        = string
   description = "* name of the resource group pool"
 }
