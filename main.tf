@@ -61,10 +61,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     kube_dashboard {
       enabled = var.kube_dashboard_enabled
     }
-    oms_agent {
-      enabled                    = local.oms_enabled
-      log_analytics_workspace_id = var.oms_log_analytics_workspace_id
-    }
   }
 
   tags = {
