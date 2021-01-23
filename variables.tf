@@ -77,7 +77,7 @@ variable dns_prefix {
 variable node_pool_name {
   type        = string
   description = "node pool name."
-  default     = ""
+  default     = "aks-df-pn"
 }
 
 variable node_pool_count {
